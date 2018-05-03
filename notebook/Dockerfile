@@ -25,6 +25,8 @@ RUN pip install graphviz \
                 --no-cache-dir \
                 --no-dependencies
 
+RUN pip install -U spacy
+
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
 RUN chmod +x /usr/bin/prepare.sh
