@@ -33,6 +33,7 @@ USER $NB_USER
 
 RUN pip install --upgrade pip
 RUN pip install -U spacy
+RUN python -m spacy download en_core_web_md
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
