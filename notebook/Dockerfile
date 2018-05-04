@@ -25,6 +25,13 @@ RUN pip install graphviz \
                 --no-cache-dir \
                 --no-dependencies
 
+USER root
+RUN apt-get update \
+  && apt-get install --reinstall -yq build-essential \
+  && apt-get install -yq gcc
+USER $NB_USER
+
+RUN pip install --upgrade pip
 RUN pip install -U spacy
 
 USER root

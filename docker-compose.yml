@@ -24,7 +24,7 @@ services:
     build:
       context: ./notebook
       dockerfile: Dockerfile
-    image: daskdev/dask-notebook
+    image: zezuladp/dask-notebook
     hostname: notebook
     ports:
       - "8888:8888"
